@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizing Housing Market Trends - Data Analytics Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Visualizing Housing Market Trends</h1>
+            <p class="hero-subtitle">An Analysis of Sale Prices and Features using Tableau</p>
+            <button class="cta-button" onclick="scrollToSection('dashboard')">
+                <span>View Dashboard</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </button>
+        </div>
+        <div class="hero-background"></div>
+    </section>
+
+    <!-- Project Overview Section -->
+    <section class="overview">
+        <div class="container">
+            <h2 class="section-title">Project Overview</h2>
+            <div class="overview-content">
+                <p>
+                    This comprehensive housing market analysis explores the intricate relationships between 
+                    property features and sale prices. Through interactive data visualizations, we uncover 
+                    how renovations, house age, and various amenities impact property values in today's 
+                    competitive real estate market.
+                </p>
+                <div class="overview-highlights">
+                    <div class="highlight">
+                        <span class="highlight-icon">📊</span>
+                        <span>Real Estate Analytics</span>
+                    </div>
+                    <div class="highlight">
+                        <span class="highlight-icon">🏠</span>
+                        <span>Property Features Analysis</span>
+                    </div>
+                    <div class="highlight">
+                        <span class="highlight-icon">📈</span>
+                        <span>Interactive Visualizations</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insights Section -->
+    <section class="insights">
+        <div class="container">
+            <h2 class="section-title">Key Insights & Analysis</h2>
+            <div class="cards-grid">
+                <div class="insight-card">
+                    <div class="card-icon">📋</div>
+                    <h3>Overall Data Overview</h3>
+                    <p>Comprehensive analysis of housing market data with interactive filters for price ranges, locations, and property types.</p>
+                    <div class="card-footer">
+                        <span class="card-tag">Dashboard 1</span>
+                    </div>
+                </div>
+
+                <div class="insight-card">
+                    <div class="card-icon">🔄</div>
+                    <h3>Total Sales by Years Since Renovation</h3>
+                    <p>Explore how renovation timelines affect property values and market demand across different price segments.</p>
+                    <div class="card-footer">
+                        <span class="card-tag">Dashboard 2</span>
+                    </div>
+                </div>
+
+                <div class="insight-card">
+                    <div class="card-icon">🏗️</div>
+                    <h3>Distribution of House Age by Renovation Status</h3>
+                    <p>Visualize the correlation between property age and renovation status to identify value optimization opportunities.</p>
+                    <div class="card-footer">
+                        <span class="card-tag">Dashboard 3</span>
+                    </div>
+                </div>
+
+                <div class="insight-card">
+                    <div class="card-icon">🛏️</div>
+                    <h3>House Age Distribution by Bathrooms, Bedrooms, and Floors</h3>
+                    <p>Analyze how room configurations and floor counts impact property values across different age groups.</p>
+                    <div class="card-footer">
+                        <span class="card-tag">Dashboard 4</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tableau Dashboard Section -->
+    <section id="dashboard" class="dashboard-section">
+        <div class="container">
+            <h2 class="section-title">Interactive Dashboard</h2>
+            <p class="dashboard-description">
+                Explore the data through our interactive Tableau dashboard. Click, filter, and discover insights about housing market trends.
+            </p>
+            <div class="tableau-wrapper">
+                <iframe src="https://public.tableau.com/views/VisualizingHousingMarketTrends_AnAnalysisofSalePricesandFeaturesusingTableauVisualizingHousingMarketTrends_AnAnalysisofSalePricesandFeaturesusingTableau/Story1?:showVizHome=no&:embed=true"
+                        width="100%" 
+                        height="850"
+                        frameborder="0">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Housing Market Trends Analysis</h3>
+                    <p>Interactive Data Visualization Project</p>
+                </div>
+                <div class="footer-tech">
+                    <h4>Technologies Used</h4>
+                    <div class="tech-stack">
+                        <span class="tech-badge">Tableau</span>
+                        <span class="tech-badge">Flask</span>
+                        <span class="tech-badge">HTML5</span>
+                        <span class="tech-badge">CSS3</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Housing Market Analytics. Crafted with data-driven insights.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.insight-card, .section-title').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
