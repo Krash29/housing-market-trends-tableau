@@ -133,123 +133,6 @@ housing-market-trends-tableau/
     └── index.html         # Main webpage containing Tableau embed
 ```
 
-### Optional Folders
-
-```
-static/    # CSS, images
-data/      # CSV datasets (not required for running the project)
-```
-
----
-
-## Installation & Setup
-
-### Prerequisites
-
-- Python **3.8+**
-- Git (optional)
-- Tableau Public account
-
----
-
-## Step 1: Clone the Repository
-
-```bash
-git clone https://github.com/YOUR-USERNAME/housing-market-trends-tableau.git
-cd housing-market-trends-tableau
-```
-
----
-
-## Step 2: Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-Main dependency:
-
-```
-Flask
-```
-
----
-
-## Step 3: Update Tableau Embed URL
-
-Open the following file:
-
-```
-templates/index.html
-```
-
-Replace the iframe source with your Tableau Public dashboard link.
-
-Example:
-
-```html
-<iframe 
-  src="https://public.tableau.com/views/YourVizName/Dashboard1?:embed=y&:display_count=no&:showVizHome=no"
-  width="100%"
-  height="900px"
-  frameborder="0"
-  allowfullscreen>
-</iframe>
-```
-
----
-
-## Step 4: Run the Flask Application
-
-```bash
-python app.py
-```
-
----
-
-## Step 5: Open in Browser
-
-Visit the following URL:
-
-```
-http://127.0.0.1:5000
-```
-
-The webpage will display your **embedded Tableau dashboard**.
-
----
-
-# How to Get Your Tableau Embed Link
-
-1. Publish your **Tableau workbook or story** to Tableau Public  
-2. Open the published dashboard  
-3. Click **Share → Embed Code**  
-4. Copy the **iframe `src` URL**  
-5. Paste it inside **index.html**
-
----
-
-# Screenshots
-
-(Add screenshots after running the project)
-
-- Dashboard Overview  
-- Renovation Histogram  
-- House Age & Renovation Pie Chart  
-- Features by Age Bar Chart  
-
----
-
-# Team / Credits
-
-## Project Lead / Developer
-Krashika Raikwar
-
-## Team Members
-
-- Lokesh Choudhary  
-- Krati Thakur  
-- Manish Barman  
 
 ## Project Context
 
@@ -261,9 +144,6 @@ Academic / Real Estate Data Analysis Project
 
 MIT License
 
-You are free to **use, modify, and distribute** this project.
-
----
 
 # Acknowledgments
 
@@ -275,9 +155,13 @@ You are free to **use, modify, and distribute** this project.
 ---
 
 # Tableau Public Dashboard
+The project includes an interactive dashboard built using Tableau Public.
+
+Live Interactive Dashboard
+View the interactive visualization here:
 
 ```
-https://public.tableau.com/views/VisualizingHousingMarketTrends_AnAnalysisofSalePricesandFeaturesusingTableau/
+https://public.tableau.com/app/profile/krashika.raikwar5181/viz/VisualizingHousingMarketTrends_AnAnalysisofSalePricesandFeaturesusingTableauVisualizingHousingMarketTrends_AnAnalysisofSalePricesandFeaturesusingTableau/Story1
 ```
 
 ---
