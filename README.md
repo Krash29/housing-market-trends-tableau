@@ -1,6 +1,6 @@
 # Visualizing Housing Market Trends: An Analysis of Sale Prices and Features using Tableau
 
-![Project Banner](https://via.placeholder.com/1200x400?text=Tableau+Housing+Market+Dashboard)
+(https://via.placeholder.com/1200x400?text=Tableau+Housing+Market+Dashboard)
 
 *(Replace the above image link with an actual screenshot of your Tableau dashboard or the hero section of your web app.)*
 
